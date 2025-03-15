@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				temple: {
+					gold: '#E6B980',
+					saffron: '#FFA555',
+					orange: '#FF7722',
+					red: '#C53030',
+					gray: '#4A5568',
+					'light-gold': '#F2E3CF'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,68 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in-right': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'fade-in-left': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 15px 2px rgba(230, 185, 128, 0.4)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 20px 5px rgba(230, 185, 128, 0.7)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-right': 'fade-in-right 0.6s ease-out',
+				'fade-in-left': 'fade-in-left 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
+				'glow': 'glow 3s ease-in-out infinite'
+			},
+			fontFamily: {
+				'heading': ['Playfair Display', 'serif'],
+				'body': ['Inter', 'sans-serif']
 			}
 		}
 	},
